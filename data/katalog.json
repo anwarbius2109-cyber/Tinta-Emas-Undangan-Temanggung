@@ -1,5 +1,11 @@
 [
   {
+     "nama": "My Melody",
+    "gambar": "assets/My Melody.png",
+    "link": "https://id.sudahnikah.com/d/My-Melody?kpd=Tamu+Undangan",
+    "kategori": "ulangtahun"
+  },
+  {
     "nama": "Thinker Bell",
     "gambar": "assets/Thinker Bell.png",
     "link": "https://id.sudahnikah.com/d/Thinker-Bell?kpd=Tamu+Undangan",
