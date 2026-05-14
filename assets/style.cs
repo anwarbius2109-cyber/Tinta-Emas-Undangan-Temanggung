@@ -1,0 +1,203 @@
+/* =========================
+   GLOBAL
+========================= */
+
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html{
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+}
+
+body{
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  color: #1f2937;
+  overflow-x: hidden;
+  background: #fff;
+}
+
+/* =========================
+   HEADING PREMIUM
+========================= */
+
+h1,
+h2,
+h3,
+.logo-font{
+  font-family: 'Cormorant Garamond', serif;
+  letter-spacing: 0.5px;
+  line-height: 1.2;
+}
+
+/* =========================
+   IMAGE
+========================= */
+
+img{
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+/* =========================
+   BUTTON & LINK
+========================= */
+
+button,
+a{
+  transition: all 0.3s ease;
+}
+
+/* =========================
+   FILTER BUTTON
+========================= */
+
+.btn-filter{
+  padding: 10px 18px;
+  border-radius: 999px;
+  background: rgba(255,255,255,0.7);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255,255,255,0.4);
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-filter:hover{
+  background: #000;
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+.btn-filter.active{
+  background: #000;
+  color: #fff;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+/* =========================
+   SEARCH BOX
+========================= */
+
+.search-box input{
+  width: 100%;
+  padding: 14px 18px;
+  border-radius: 16px;
+  border: 1px solid rgba(0,0,0,0.08);
+  background: rgba(255,255,255,0.8);
+  backdrop-filter: blur(12px);
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+.search-box input:focus{
+  background: #fff;
+  box-shadow: 0 0 0 4px rgba(0,0,0,0.05);
+}
+
+/* =========================
+   CARD
+========================= */
+
+.hover-card{
+  transition: all 0.3s ease;
+}
+
+.hover-card:hover{
+  transform: translateY(-5px);
+}
+
+/* CARD TEMA */
+
+.card-tema{
+  overflow: hidden;
+  border-radius: 20px;
+}
+
+.card-tema img{
+  aspect-ratio: 9/16;
+  border-radius: 20px;
+}
+
+/* =========================
+   KATALOG GRID
+========================= */
+
+#katalog{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 1024px){
+
+  #katalog{
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+  }
+
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 768px){
+
+  #katalog{
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+  }
+
+  .card-tema{
+    border-radius: 14px;
+  }
+
+  .card-tema img{
+    border-radius: 14px;
+  }
+
+  .card-tema h3{
+    font-size: 12px;
+    line-height: 1.3;
+    margin-top: 6px;
+  }
+
+  .btn-filter{
+    padding: 8px 14px;
+    font-size: 12px;
+  }
+
+  .search-box input{
+    padding: 12px 14px;
+    font-size: 14px;
+  }
+
+}
+
+/* =========================
+   SMALL MOBILE
+========================= */
+
+@media (max-width: 480px){
+
+  #katalog{
+    gap: 8px;
+  }
+
+  .card-tema h3{
+    font-size: 11px;
+  }
+
+}
