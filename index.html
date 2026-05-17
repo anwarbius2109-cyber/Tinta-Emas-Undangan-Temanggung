@@ -467,7 +467,8 @@
 </section>
 
 <!-- FILTER -->
-<div class="max-w-6xl mx-auto px-4 mb-8 flex gap-3 flex-wrap justify-center">
+<div id="kategori"
+class="max-w-6xl mx-auto px-4 mb-8 flex gap-3 flex-wrap justify-center">
 
   <button onclick="filterKategori('all')" data-kategori="all" class="btn-filter active">
     Semua
