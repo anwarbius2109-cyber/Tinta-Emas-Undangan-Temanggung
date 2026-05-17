@@ -18,43 +18,49 @@ fetch("data/katalog.json")
 
     const searchInput = document.getElementById("search");
 
-    searchInput.addEventListener("input", function(){
+   searchInput.addEventListener("input", function(){
 
-      const keyword = this.value.toLowerCase().trim();
+  const keyword = this.value.toLowerCase().trim();
 
-      halaman = 1;
+  halaman = 1;
 
-      // kalau kosong
-      if(keyword === ""){
-        dataAktif = semuaData;
-        tampilkan();
-        return;
-      }
+  // 🔥 UBAH HASH URL
+  if(keyword === ""){
+    window.location.hash = "katalog";
+  } else {
+    const slug = keyword.replace(/\s+/g, "-");
+    window.location.hash = `katalog/${slug}`;
+  }
 
-      // pecah kata
-      const kataCari = keyword.split(" ");
+  // kalau kosong
+  if(keyword === ""){
+    dataAktif = semuaData;
+    tampilkan();
+    return;
+  }
 
-      dataAktif = semuaData.filter(item => {
+  // pecah kata
+  const kataCari = keyword.split(" ");
 
-        // gabungkan semua text
-        const gabung = `
-          ${item.nama || ""}
-          ${item.kategori || ""}
-          ${(item.keyword || []).join(" ")}
-        `.toLowerCase();
+  dataAktif = semuaData.filter(item => {
 
-        // flexible search
-        return kataCari.some(kata => 
-          gabung.includes(kata)
-        );
+    // gabungkan semua text
+    const gabung = `
+      ${item.nama || ""}
+      ${item.kategori || ""}
+      ${(item.keyword || []).join(" ")}
+    `.toLowerCase();
 
-      });
-
-      tampilkan();
-
-    });
+    // flexible search
+    return kataCari.some(kata => 
+      gabung.includes(kata)
+    );
 
   });
+
+  tampilkan();
+
+});
 
 function tampilkan(){
   const katalog = document.getElementById("katalog");
