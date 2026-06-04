@@ -1,10 +1,17 @@
 [
   {
+    "nama": "Baby Truck",
+    "gambar": "assets/Baby Truck.png",
+    "link": "https://id.sudahnikah.com/d/Baby-Truck?kpd=Tamu+Undangan",
+    "kategori": "ulangtahun",
+    "keyword": ["mobile","truck","kartun","anak","ulangtahun","lucu","cars"]
+  },
+  {
     "nama": "Baby Cars",
     "gambar": "assets/Baby Cars.png",
     "link": "https://id.sudahnikah.com/d/Baby-Cars?kpd=Tamu+Undangan",
-    "kategori": "khitan",
-    "keyword": ["islami","muslim","khitan","lentera","religius","emas","gold"]
+    "kategori": "ulangtahun",
+    "keyword": ["mobile","truck","kartun","anak","ulangtahun","lucu","cars"]
   },
   {
     "nama": "Bee Natural",
